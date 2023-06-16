@@ -1,0 +1,14 @@
+.Avatar .bi-pencil-fill {
+  color: rgb(55, 71, 104);
+}
+
+.Profil {
+  overflow-y: scroll;
+  max-height: 76vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.Profil::-webkit-scrollbar {
+  display: none;
+}

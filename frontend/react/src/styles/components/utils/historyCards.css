@@ -1,0 +1,18 @@
+.Winner {
+  /* color: green */
+  color: rgb(172, 230, 61)
+}
+
+.Looser {
+  color: lightgrey
+}
+
+.historyDiv {
+  background-color: rgb(67, 156, 202);
+	/* background-color: gray; */
+	height: 62px;
+	width: 100%;
+	border-radius: 20px;
+  padding: 20px;
+  padding-right: 10px;
+}

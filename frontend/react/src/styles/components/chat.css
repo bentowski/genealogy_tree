@@ -1,0 +1,32 @@
+.chat {
+  overflow-y: scroll;
+  max-height: 76vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
+.list-group {
+  overflow-y: scroll;
+  max-height: 38vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.list-group::-webkit-scrollbar {
+  display: none;
+}
+
+.messages {
+  overflow-y: scroll;
+  max-height: 35vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}

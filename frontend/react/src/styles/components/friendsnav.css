@@ -1,0 +1,35 @@
+li {
+    list-style-type: none;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+.item-list {
+    position: absolute;
+    transform: translateY(35px);
+    background-color: white;
+    color: black;
+    /* width: 100; */
+}
+
+/* 
+.inputDrop {
+    transform: translateY(20px);
+} */
+
+.pat {
+    max-width: 50%;
+}
+
+.FriendsNav {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.FriendsNav::-webkit-scrollbar {
+    display: none;
+}

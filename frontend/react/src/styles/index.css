@@ -1,0 +1,466 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: /* 'SpongeBobFont', */ -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: rgb(55, 71, 104);
+	overflow-anchor: none;
+	font-weight: 900;
+	/* letter-spacing: 0.42px; */
+  /* background-color: #3b3c3a; */
+}
+
+h1, h2, h3, button, .btn {
+	font-family: 'SpongeBobFont', sans-serif;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+@font-face {
+	font-family: "SpongeBobFont";
+	src: url("http://cousinade-baudry.fr/font/spongebobfont.woff");
+}
+/* 
+p {
+	margin: 0;
+	color: rgb(55, 55, 55);
+} */
+
+a {
+	text-decoration: none;
+	color: rgb(55, 71, 104);
+	/* color: rgb(55, 55, 55); */
+}
+
+a:hover {
+	/* font-weight: 600;
+	letter-spacing: 0px; */
+	/* color: white; */
+	/* color: gray; */
+	color: rgb(55, 71, 104);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	/* text-decoration-line: 2px; */
+}
+
+.App {
+	background-image: url(http://cousinade-baudry.fr/pictures/bgSponge3-blur.jpg);
+	background-size: cover;
+	background-position: center;
+	/* -webkit-backdrop-filter: blur(15px); assure la compatibilité avec safari */
+    /* filter: blur(7px); */
+}
+
+.Page {
+	min-height: 90vh;
+}
+
+.main {
+	min-height: 80vh;
+}
+
+a:active {
+  color: white;
+}
+
+.globalError {
+	z-index: 2000;
+	position: absolute;
+	width: 100%;
+}
+
+/* .logoutMenu p {
+	color: orangered;
+} */
+
+/* .logoutMenu:hover p { */
+	/* color: orangered; */
+	/* text-decoration: underline;
+	text-decoration-thickness: 2px;
+} */
+/* 
+.logoutMenu:active p {
+  color: white;
+} */
+
+ul {
+	padding: 0;
+}
+/* 
+.m-2 {
+	padding: 0;
+	margin: 0;
+} */
+
+button {
+	background: none;
+	border: none;
+	padding-inline: 5px;
+	color: rgb(55, 71, 104);
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+button:not(.btnAvatar, .btnUsername, .btn-close) {
+  border: 2px solid rgb(99, 82, 28);
+	background: rgb(155, 133, 60);
+	background-image: url(http://cousinade-baudry.fr/pictures/wood.png);
+	background-size: 150%;
+	background-position: 30%;
+  border-radius: 10px;
+  color: white;
+	padding-top: 5px;
+	box-shadow: 0 3px rgb(99, 82, 28);
+	overflow: hidden;
+}
+
+button:hover:not(.btnAvatar, .btnUsername, .btn-close) {
+	color: rgb(99, 82, 28);
+}
+
+button:active:not(.btnAvatar, .btnUsername, .btn-close) {
+	transform: translateY(3px);
+	box-shadow: 0 0;
+}
+
+.btn {
+  border: 2px solid rgb(99, 82, 28);
+	background-image: url(http://cousinade-baudry.fr/pictures/wood.png);
+	background-size: 150%;
+	background-position: 30%;
+	background: rgb(155, 133, 60);
+  border-radius: 10px;
+  color: white;
+	padding-top: 5px;
+	box-shadow: 0 3px rgb(99, 82, 28);
+}
+
+.btn:hover {
+  border: 2px solid rgb(99, 82, 28);
+	background-image: url(http://cousinade-baudry.fr/pictures/wood.png);
+	background-size: 150%;
+	background-position: 30%;
+	color: rgb(99, 82, 28);
+	background: rgb(155, 133, 60);
+}
+
+.btn:active {
+	background-image: url(http://cousinade-baudry.fr/pictures/wood.png);
+	background-size: 150%;
+	background-position: 30%;
+	transform: translateY(3px);
+	box-shadow: 0 0;
+}
+
+img:not(.clickable) {
+	width:auto;
+	max-width: 100%;
+	max-height: 100%;
+	pointer-events: none;
+	user-select: none;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+	/* display: block; */
+
+}
+
+.form-switch .form-check-input {
+  /* width: 2em;
+  margin-left: -2.5em; */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+  /* background-position: left center;
+  border-radius: 2em;
+  transition: background-position .15s ease-in-out; */
+}
+
+.form-switch .form-check-input:checked {
+  /* background-position: right center; */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+}
+
+.form-check-input {
+	border: 2px solid orange;
+	background-color: #3b3c3a;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+}
+
+.form-check-input:focus {
+	border: 2px solid orange;
+	box-shadow: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+}
+
+.form-check-input:active {
+	border: 2px solid orange;
+	box-shadow: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+}
+
+.form-check-input:checked {
+  background-color: yellowgreen;
+  border-color: orange;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='orange'/%3e%3c/svg%3e");
+}
+
+.modal-content {
+	top: 50vh;
+  transform: translate(0, -50%);
+	border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+	color: #3b3c3a;
+}
+
+.Menu {
+	height: 62px;
+	padding: 20px;
+	padding-right: 10px;
+	background-image: url(http://cousinade-baudry.fr/pictures/banner.jpg);
+	background-size: auto 500%!important;
+	background-position: center;
+}
+
+.BobLePong {
+	position: absolute;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	height: 150px;
+	width: auto;
+}
+
+.FriendsNav, .MatchNav , .Menu {
+	background-color:rgba(125, 0, 125, 0.2);
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	z-index: 999!important;
+}
+/* 
+.MatchNav {
+	border: 5px solid rgb(158, 157, 5);
+} */
+
+.front {
+	z-index: 99;
+}
+
+.FriendsNav, .MatchNav {
+	/* height: 100%; */
+	padding: 10px;
+}
+
+.FriendsNav, .MatchNav, #mainDiv {
+	height: 76vh;
+}
+
+.FriendsNav {
+	/* background-image: url(http://cousinade-baudry.fr/pictures/divBg2.jpg); */
+	/* background-image: url(http://cousinade-baudry.fr/pictures/divBg2.jpg); */
+	border: 3px solid #e67b6bff;
+	background-color: rgb(254, 151, 136);
+	background-repeat: repeat;
+	background-size: 70%;
+	background-image: url(http://cousinade-baudry.fr/pictures/patskin.png);
+	/* overflow-x: hidden;
+	overflow-y: auto; */
+}
+/* 
+.addFriends {
+	overflow-y: auto;
+} */
+
+.MatchNav {
+	border: 3px solid #c2c746;
+	background-color: #fff359;
+	background-repeat: repeat;
+	background-size: 70%;
+	background-image: url(http://cousinade-baudry.fr/pictures/bobskin.png);
+	/* background-image: url(http://cousinade-baudry.fr/pictures/divBg.jpg);
+	z-index: 999999!important; */
+}
+
+.Ratio {
+	/* color: #3b3c3a; */
+	background-color: rgb(67, 156, 202);
+	/* background-color: gray; */
+	height: 42px;
+	width: 100%;
+	border-radius: 10px;
+	/* width: ; */
+}
+
+.Rwon {
+	/* color: #3b3c3a; */
+	background-color: rgb(172, 230, 61);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	/* border: 2px solid red; */
+	height: 100%;
+	/* text-align: center; */
+	/* border-left-: 10px; */
+	/* overflow: hidden; */
+}
+
+.miniAvatar {
+	width: 42px;
+	height: 42px;
+	max-width: 42px;
+	max-height: 42px;
+	min-width: 42px;
+	min-height: 42px;
+	display: block;
+	left: -20px;
+	border-radius: 10px;
+	border: 2px solid rgb(55, 71, 104);;
+	padding: 2px;
+}
+
+.modifAvatar {
+	max-width: 100px;
+	max-height: 100px;
+	display: block;
+	border-radius: 20px;
+	border: 2px solid rgb(55, 71, 104);;
+	padding: 2px;
+}
+
+.miniAvatar:hover, .modifAvatar:hover {
+	background-color: rgb(55, 71, 104);;
+	/* border: 4px solid orange; */
+	/* padding: 0; */
+}
+
+.miniAvatar:active, .modifAvatar:active {
+	background-color: white;
+	border-color: white;
+}
+
+.miniAvatar div, .modifAvatar div {
+	width: 100%;
+	height: 100%;
+}
+
+.miniAvatar:hover div, .modifAvatar:hover div {
+	width: 50%;
+	height: 50%;
+	border-radius: 2px solid orange;
+}
+
+.miniAvatar:focus div, .modifAvatar:focus div {
+	width: 50%;
+	height: 50%;
+	border-radius: 2px solid white;
+}
+
+.incoming_msg_img {
+	display: inline-block;
+	width: 6%;
+  }
+
+.received_msg {
+	display: inline-block;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+	width: 92%;
+   }
+
+   .received_withd_msg p {
+	background: #ebebeb none repeat scroll 0 0;
+	border-radius: 3px;
+	color: #646464;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+  }
+  .time_date {
+	color: #747474;
+	display: block;
+	font-size: 12px;
+	margin: 8px 0 0;
+  }
+  .received_withd_msg { width: 57%;}
+  .mesgs {
+	float: left;
+	padding: 30px 15px 0 25px;
+	width: 60%;
+  }
+
+   .sent_msg p {
+	background: #05728f none repeat scroll 0 0;
+	border-radius: 3px;
+	font-size: 14px;
+	margin: 0; color:#fff;
+	padding: 5px 10px 5px 12px;
+	width:100%;
+  }
+  .outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+  .sent_msg {
+	float: right;
+	width: 46%;
+  }
+
+  .break-text {
+	word-wrap: break-word;
+  }
+	/* .checkPassword {
+		z-index: 3000;
+		width: 100%;
+		height: 50px;
+		border: solid 10px black;
+	} */
+
+
+	/* background-image: linear-gradient(purple 10%, transparent); */
+
+/* .Menu {
+	width: 100%;
+	height: 46px;
+	background-color: white;
+	padding: 10px;
+}
+
+.homeButtonDiv {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+.titleDiv {
+	display: inline;
+	float: none;
+	position: relative;
+}
+
+.profilMenu {
+	display: inline;
+	float: right;
+	position: relative;
+}
+
+.loginMenu {
+	display: inline;
+	float: left;
+	position: absolute;
+	margin-right: 60px;
+}
+
+.avatarMenu {
+	display: inline;
+	float: left;
+	position: absolute;
+	margin-right: 60px;
+} */
+/* .homeButtonDiv {
+	display: inline;
+	float: left;
+} */

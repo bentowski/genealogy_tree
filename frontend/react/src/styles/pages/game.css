@@ -1,0 +1,40 @@
+#joueur1{
+  background-color: black;
+}
+
+#joueur2{
+  background-color: black;
+}
+
+#globale{
+  background-color: black;
+}
+
+.global-bg {
+  background-image: url("http://cousinade-baudry.fr/pictures/bg-pong.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.canvas{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  /* margin-bottom: 10vh; */
+}
+/*
+@media screen and (max-width: 500px)
+{
+    .canva {
+      width: "";
+    }
+} */
+/*
+@media screen and (max-height: 900px)
+{
+    .canva {
+      width: "90%";
+    }
+} */

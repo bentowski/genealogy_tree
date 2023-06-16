@@ -1,0 +1,13 @@
+.bob {
+  max-width: 50%;
+}
+
+.MatchNav {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.MatchNav::-webkit-scrollbar {
+  display: none;
+}

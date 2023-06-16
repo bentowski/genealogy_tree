@@ -1,0 +1,119 @@
+//================= LOGIN + 2FA ==================
+Tester pages
+Se connecter
+activer 2FA
+logout
+
+Tester pages
+login
+
+Se connecter depuis navigation privee, meme tests
+Se connecter depuis un autre pc, meme tests
+
+
+// ================= Menu ==================
+
+Go Chat page
+Go Score page
+Go Profil by username
+Go Profil by avatar
+Logout
+
+//================== Chat ==================
+
+
+// === Tests generiques
+
+invite people
+test messages
+refresh
+changer page puis revenir
+bouton previous/next
+mute
+ban
+block
+add admin
+kick owner with admin
+kick user with admin
+add admin with admin
+kick admin with owner
+invite people to play
+send private msg
+go to profil
+Block user
+see connection
+leave
+
+// === tests specifiques
+
+create channel public
+join channel public
+tests generiques
+
+
+create channel protected
+join channel protected sans mdp
+join channel protected avec mauvais mdp
+join channel protected avec bon mdp
+tests generiques
+
+create channel private
+join channel protected sans mdp
+join channel protected avec mauvais mdp
+join channel protected avec bon mdp
+tests generiques
+
+// === Private msg
+
+send private msg
+tests generiques (oui oui, tous les faires, pour checker qu'on peut pas effectuer d'action non autorisee)
+
+// ================= Profil ==================
+
+// === Own profil
+
+change avatar
+change username
+rank is ok
+history is ok
+go to users profil by history
+bouton 2FA
+bouton logout
+
+// === Other profil
+
+see avatar
+see username
+see rank
+see history
+go to users profil by history
+add friends
+invite to play
+send private msg
+Block user
+
+// ================== Score ===================
+
+see correct scores
+go to users profil by score
+
+// ================= FriendsNav ===============
+
+Add users by username
+Add the same user
+Add own username
+Add wrong username
+Send Private msg
+Invite to play
+Go to Profil
+Suppr friends
+Block user
+
+// ================= MatchNav =================
+
+Create solo partie
+Create multi partie
+Join partie
+RandomMatchmaking
+Spectate partie
+Search Parties

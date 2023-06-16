@@ -1,0 +1,105 @@
+version: "3.3"
+
+services:
+ site:
+  image: site:v0
+  container_name: site
+  build:
+   context: ./frontend/
+   dockerfile: Dockerfile
+  volumes:
+   - site_volume:/home/node/www
+  ports:
+   - "80:80"
+  networks:
+   - app_network
+  restart: always
+
+ api:
+  image: api:v0
+  container_name: api
+  build:
+   context: ./backend/
+   # Only will build development stage from our Dockerfile
+  #  target: development
+   dockerfile: Dockerfile
+  volumes:
+   - api_volume:/home/node/app
+  ports:
+   - "3000:3000"
+  # Run a command against the development stage of the image
+  command: npm run start:dev
+  #depends_on:
+   #- postgres
+  networks:
+   - app_network
+   - postgres_network
+  restart: always
+
+ postgres:
+  container_name: postgres
+  image: postgres:alpine
+  environment:
+   POSTGRES_USER: admin
+   POSTGRES_PASSWORD: admin
+   POSTGRES_DB: transcendence
+  ports:
+   - "5432:5432"
+  networks:
+   - postgres_network
+  restart: always
+  volumes:
+   - postgres_volume:/var/lib/postgresql/data
+
+ pgadmin:
+  links:
+   - postgres:postgres
+  container_name: pgadmin
+  image: dpage/pgadmin4
+  ports:
+   - "5000:80"
+  volumes:
+   - pgadmin_volume:/root/.pgadmin
+  environment:
+   PGADMIN_DEFAULT_EMAIL: admin@admin.com
+   PGADMIN_DEFAULT_PASSWORD: admin
+  depends_on:
+   - postgres
+  networks:
+   - postgres_network
+
+networks:
+  app_network:
+   driver : bridge
+  postgres_network:
+   driver: bridge
+
+volumes:
+ postgres_volume:
+  # name: postgres_volume
+  # driver: local
+  # driver_opts:
+  #  o: bind
+  #  type: volume
+  #  device: ${PWD}/data/postgresdb
+ pgadmin_volume:
+  # name: pgadmin_volume
+  # driver: local
+  # driver_opts:
+  #  o: bind
+  #  type: volume
+  #  device: ${PWD}/data/pgadmin
+ api_volume:
+   # name: api_volume
+   # driver: local
+   # driver_opts:
+   #  o: bind
+   #  type: volume
+   #  device: ${PWD}/backend/volume
+ site_volume:
+  # name: site_volume
+  # driver: local
+  # driver_opts:
+  #  o: bind
+  #  type: volume
+  #  device: ${PWD}/frontend/volume

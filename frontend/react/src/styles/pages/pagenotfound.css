@@ -1,0 +1,115 @@
+.pageNotFound {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(http://cousinade-baudry.fr/pictures/carlo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.pageNotFound h1 {
+  position: fixed;
+  top: 50vh;
+  bottom: auto;
+  left: 50vw;
+  right: auto;
+  width: 100vw;
+  height: 100vh;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@-webkit-keyframes animatedGaryRotate {
+    from {
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes animatedGaryRotate {
+    from {
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animatedGaryRotate {
+	from {
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes animatedGaryUp {
+    from {
+        top: 0;
+    }
+    to {
+        top: calc(100% - 10vh);
+    }
+}
+
+@-moz-keyframes animatedGaryUp {
+    from {
+        top: 0;
+    }
+    to {
+        top: calc(100% - 10vh);
+    }
+}
+
+@keyframes animatedGaryUp {
+	from {
+        top: 0;
+    }
+    to {
+        top: calc(100% - 10vh);
+    }
+}
+
+@-webkit-keyframes animatedGarySides {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 10vh);
+    }
+}
+
+@-moz-keyframes animatedGarySides {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 10vh);
+    }
+}
+
+@keyframes animatedGarySides {
+	from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 10vh);
+    }
+}
+
+.gary {
+
+	-webkit-animation: animatedGarySides 4s linear infinite alternate, animatedGaryUp 6s linear infinite alternate, animatedGaryRotate 2s linear infinite;
+	-moz-animation: animatedGarySides 4s linear infinite alternate, animatedGaryUp 6s linear infinite alternate, animatedGaryRotate 2s linear infinite;
+	animation: animatedGarySides 4s linear infinite alternate, animatedGaryUp 6s linear infinite alternate, animatedGaryRotate 2s linear infinite;
+
+    background-image: url("http://cousinade-baudry.fr/pictures/gary.png");
+	background-position: center;
+	background-size:cover;
+    width: 10vh;
+    height: 10vh;
+	position: absolute;
+	overflow-x: hidden;
+}
